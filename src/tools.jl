@@ -4,3 +4,9 @@ function push_to_domain!(x::Vector{<:Number}, domain::Matrix{<:Number})
         x[i] = clamp(v, low, high)
     end
 end
+
+function push_to_domain(x::Vector{<:Number}, domain::Matrix{<:Number})
+    x̃ = copy(x)
+    push_to_domain!(x̃, domain)
+    return x̃
+end
