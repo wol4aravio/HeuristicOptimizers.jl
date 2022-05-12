@@ -15,4 +15,12 @@ using Test
         dummy_test_var &=  x == HeuristicOptimizers.push_to_domain(x, domain)
     end
     @test dummy_test_var
+
+    dummy_test_var = true
+    radius = 17.0
+    for _ in range(1, 100)
+        x = HeuristicOptimizers.generate_in_sphere([0, 0, 0], radius)
+        dummy_test_var &=  HeuristicOptimizers.l2_norm(x) <= radius
+    end
+    @test dummy_test_var
 end
