@@ -10,3 +10,9 @@ function push_to_domain(x::Vector{<:Number}, domain::Matrix{<:Number})
     push_to_domain!(x̃, domain)
     return x̃
 end
+
+function generate_vector_in_area(domain::Matrix{<:Number})
+    ω = domain[:, 2] - domain[:, 1]
+    x = domain[:, 1] + rand(size(domain)[1]) .* ω
+    return x
+end
