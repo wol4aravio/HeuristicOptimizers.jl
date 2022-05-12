@@ -1,6 +1,5 @@
 using HeuristicOptimizers
-using Test
 
-@testset "HeuristicOptimizers.jl" begin
-    # Write your tests here.
+for tests in ["tools.jl"]
+    include(tests)
 end
