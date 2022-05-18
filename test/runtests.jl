@@ -1,5 +1,3 @@
-using HeuristicOptimizers
-
-for tests in ["tools.jl"]
+for tests in ["algorithms/common/tools.jl"]
     include(tests)
 end
