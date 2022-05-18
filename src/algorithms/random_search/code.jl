@@ -1,6 +1,6 @@
-include("common/abstracts.jl")
-include("common/problem.jl")
-include("common/base_state.jl")
+include("../common/abstracts.jl")
+include("../common/problem.jl")
+include("../common/base_state.jl")
 
 mutable struct State
     x::Union{Vector{<:Real}, Nothing}
