@@ -1,5 +1,3 @@
-using HeuristicOptimizers
-
 include("abstracts.jl")
 
 function init!(algorithm::AbstractHeuristicAlgorithm, problem::Problem)::BaseState end

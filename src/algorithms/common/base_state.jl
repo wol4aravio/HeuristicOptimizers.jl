@@ -1,4 +1,4 @@
-using HeuristicOptimizers
+include("tools.jl")
 
 Base.@kwdef mutable struct BaseState
     num::Int

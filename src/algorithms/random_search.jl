@@ -1,6 +1,6 @@
-using HeuristicOptimizers
-
-include("abstracts.jl")
+include("common/abstracts.jl")
+include("common/problem.jl")
+include("common/base_state.jl")
 
 mutable struct State
     x::Union{Vector{<:Real}, Nothing}
@@ -10,6 +10,10 @@ end
 @Base.kwdef struct RandomSearch <: AbstractHeuristicAlgorithm
     r::Real
     state::State = State(nothing, nothing)
+end
+
+function RS(r::Real)
+    return RandomSearch(r=r)
 end
 
 
