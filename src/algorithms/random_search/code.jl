@@ -24,9 +24,9 @@ function init!(algorithm::RandomSearch, problem::Problem)::BaseState
     algorithm.state.f = problem(algorithm.state.x)
 
     return BaseState(
-        num = 1,
-        xᵇ = algorithm.state.x,
-        yᵇ = algorithm.state.f,
+        num=1,
+        xᵇ=algorithm.state.x,
+        yᵇ=algorithm.state.f,
     )
 end
 
